@@ -1,5 +1,5 @@
 <?php
-
+$c=$_GET['c']?? "index";
 use Micaela\mvc\libs\App;
 
 //use mvc\models\Auto;
