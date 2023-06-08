@@ -1,7 +1,7 @@
 <?php
 $c=$_GET['c']?? "index";
-$m=$_GET['m']? "index";
-$con=vcfirst ($c)."_controller";
+$m=$_GET['m']?? "index";
+$con=ucfirst ($c)."_Controller";
 use Micaela\mvc\libs\App;
 
 //use mvc\models\Auto;
