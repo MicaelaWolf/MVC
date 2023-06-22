@@ -6,13 +6,14 @@ class Articulo_Controller extends Controlador
 {
   public $dato;
 
-  public function __construct($dato)
+  public function __construct()
   {
-    $this->dato = $dato;
+    parent::__construct();
   }
 
   public function listar()
   {
+    $this->dato = "dato";
     $this->cargarVista('articulo/listar');
   }
 }

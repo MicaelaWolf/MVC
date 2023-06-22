@@ -5,16 +5,14 @@ namespace Micaela\App\Libs;
 class Controlador
 {
   public $datos;
-  public $ruta;
 
-  public function __construct($ruta)
+  public function __construct()
   {
-    $this->ruta = $ruta;
   }
-  
-  public function cargarVista($ruta, $datos=null)
+
+  public function cargarVista($ruta, $datos = null)
   {
     $this->datos = $datos;
-    require_once 'src/views' . $ruta . '.php';
+    require_once 'src/views/' . $ruta . '.php';
   }
 }
