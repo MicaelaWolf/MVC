@@ -10,5 +10,3 @@ $controlador = new $con();
 $controlador->{$m}();
 
 use Micaela\mvc\Libs\App;
-
-//use mvc\models\Auto;
