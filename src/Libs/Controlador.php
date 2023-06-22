@@ -5,6 +5,6 @@ class Controlador {
   public $datos;
   public function cargarVista($ruta, $datos){
     $this->datos=$datos;
-    require_once 'src/';
+    require_once 'src/vista'.$ruta.'.php';
   }
 }
