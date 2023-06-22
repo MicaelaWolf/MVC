@@ -1,10 +1,20 @@
-<?php 
+<?php
+
 namespace Micaela\App\Libs;
 
-class Controlador {
+class Controlador
+{
   public $datos;
-  public function cargarVista($ruta, $datos){
-    $this->datos=$datos;
-    require_once 'src/vista'.$ruta.'.php';
+  public $ruta;
+
+  public function __construct($ruta)
+  {
+    $this->ruta = $ruta;
+  }
+  
+  public function cargarVista($ruta, $datos=null)
+  {
+    $this->datos = $datos;
+    require_once 'src/views' . $ruta . '.php';
   }
 }
