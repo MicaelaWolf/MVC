@@ -6,7 +6,7 @@ $conRuta="src/controller/".$con.".php";
 require_once $conRuta;
 $controlador=new $con();
 $controlador->{$m}();
-use Micaela\mvc\libs\App;
+use Micaela\mvc\Libs\App;
 
 //use mvc\models\Auto;
 require 'vendor/autoload.php';
