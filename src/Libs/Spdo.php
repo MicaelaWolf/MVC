@@ -1,16 +1,13 @@
 <?php
-
 namespace Micaela\App\Libs;
 
 use PDO;
 use PDOException;
 
-
 class Spdo
 {
   private static $instancia = null;
   private static $pdo;
-
 
   private function __construct()
   {
