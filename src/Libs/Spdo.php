@@ -9,6 +9,7 @@ use PDOException;
 class Spdo
 {
   private static $instancia = null;
+  private static $pdo;
 
 
   private function __construct()
@@ -26,7 +27,7 @@ class Spdo
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_EMULATE_PREPARES => false,
       ];
-      self::$instancia = new PDO($connection, $user, $password, $options);
+      self::$pdo = new PDO($connection, $user, $password, $options);
     } catch (PDOException $e) {
       print_r('Error connection: ' . $e->getMessage());
     }
@@ -43,5 +44,22 @@ class Spdo
   public static function cerrar()
   {
     self::$instancia = null;
+  }
+  
+  public static function conectar()
+  {
+    $host     = constant('HOST');
+    $port     = constant('PORT_DB');
+    $db       = constant('DB');
+    $user     = constant('USER');
+    $password = constant('PASSWORD');
+    $charset  = constant('CHARSET');
+
+    $connection = "mysql:host={$host};port={$port};dbname={$db};charset={$charset}";
+    $options    = [
+      PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+      PDO::ATTR_EMULATE_PREPARES => false,
+    ];
+    return $pdo= new PDO($connection, $user, $password, $options);
   }
 }
