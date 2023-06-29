@@ -20,6 +20,7 @@ class Producto
     $this->precio = $precio;
     $this->fecha = $fecha;
   }
+  
   public function listar()
   {
     $pdo = Spdo::conectar();
