@@ -14,15 +14,13 @@ class Producto_Controller extends Controlador
 
   public function listar()
   {
-    $producto = new Producto();
-    $lista = $producto->listar();
+    $lista = Producto::listar();
     $this->cargarVista('producto/listar', $lista);
   }
 
   public function listar2()
   {
-    $producto = new Producto();
-    $lista = $producto->listar();
+    $lista = Producto::listar();
     $this->cargarVista('producto/listar2', $lista);
   }
 }

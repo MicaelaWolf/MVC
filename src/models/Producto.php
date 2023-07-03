@@ -13,16 +13,16 @@ class Producto
   private $precio;
   private $fecha;
 
-  public function __construct($id = null, $codigo = null, $descripcion = null, $precio = null, $fecha = null)
+  public function __construct($id, $codigo, $descripcion, $precio, $fecha)
   {
-    $this->id = $id;
-    $this->codigo = $codigo;
-    $this->descripcion = $descripcion;
-    $this->precio = $precio;
-    $this->fecha = $fecha;
+    $id = $id;
+    $codigo = $codigo;
+    $descripcion = $descripcion;
+    $precio = $precio;
+    $fecha = $fecha;
   }
 
-  public function listar()
+  public static function listar()
   {
     $pdo = Spdo::conectar();
     try {
