@@ -25,10 +25,7 @@ class Producto
 
   public static function listar()
   {
-    //$pdo = Spdo::conectar();
     $pdo = Singleton::getInstancia()->getPdo();
-    // $sin = Singleton::getInstancia();
-    // $pdo= $sin->getPdo();
     try {
       $query = $pdo->query("select id_productos, codigo, descripcion, precio, fecha from productos");
       $productos = [];

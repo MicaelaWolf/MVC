@@ -17,10 +17,26 @@ class Producto_Controller extends Controlador
     $lista = Producto::listar();
     $this->cargarVista('producto/listar', $lista);
   }
-
-  public function listar2()
+  public function crear()
   {
-    $lista = Producto::listar();
-    $this->cargarVista('producto/listar2', $lista);
+    //$lista = Producto::listar();
+    $this->cargarVista('producto/crear');
+  }
+  public function nuevo()
+  {
+    $codigo = $_POST['codigo'];
+    echo "<pre>";
+    var_dump($_POST);
+    echo "</pre>";
+
+    $descripcion = $_POST['descripcion'] ?? "Sin descripción";
+    echo "<pre>";
+    var_dump($_POST);
+    echo "</pre>";
+
+    $precio = $_POST['precio'];
+    echo "<pre>";
+    var_dump($_POST);
+    echo "</pre>";
   }
 }

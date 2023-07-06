@@ -1,7 +1,11 @@
-<?php 
+<?php
 
-class Index_Controller {
-public function index() {
-  echo  "index controller metodo index";
-}
+use Micaela\App\Libs\Controlador;
+
+class Index_Controller extends Controlador
+{
+  public function index()
+  {
+    $this->cargarVista('index/index');
+  }
 }
