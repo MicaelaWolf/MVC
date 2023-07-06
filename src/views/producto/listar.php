@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -10,20 +10,21 @@
 
 <body>
 
-  <?php //var_dump($this->datos); 
-  ?>
-
   <table>
     <tr>
       <th>Id</th>
-      <th>Contact</th>
-      <th>Country</th>
+      <th>Codigo</th>
+      <th>Descripcion</th>
+      <th>Precio</th>
+      <th>Fecha</th>
     </tr>
     <tr>
       <?php for ($i = 0; $i < count($this->datos); $i++) {; ?>
       <td><?= $this->datos[$i]->getId(); ?></td>
-      <td>Maria Anders</td>
-      <td>Germany</td>
+      <td><?= $this->datos[$i]->getCodigo(); ?></td>
+      <td><?= $this->datos[$i]->getDescripcion(); ?></td>
+      <td><?= $this->datos[$i]->getPrecio(); ?></td>
+      <td><?= $this->datos[$i]->getFecha(); ?></td>
     </tr>
     <?php }; ?>
   </table>
